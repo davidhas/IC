@@ -1,22 +1,46 @@
 {% extends "foundation/base.html" %}
+{% load static %}
+{# Set the title of the website using the sitename from the context #}
+{% block title %}IC{% endblock %}
+{% block css %}
+{# Load the custom website styles #}
+<link rel="stylesheet" type="text/css" href="{% static 'stilwiese/base.css' %}">
+{# Give subsides the possibility to specify custom css without overwriting the base css #}
+{% block base_css %}{% endblock %}
+{% endblock %}
+{% block body_js %}
+
+{% endblock %}
+{% block body_attr %}
+
+{% endblock %}
 {% block base_body%}
-    <div class="row">
-        <div class="large-3 columns">
-
+        <img class="bg" id="bg" src="images/background.jpg"/>
+        <div class="large-2 columns" style="background: firebrick; height: 100px">
+            <h1>IC</h1>
         </div>
-        <div class="large-9 columns">
+        <div class="large-10 columns">
             <div class="row">
-                <h1>"Wer immer das tut, was er schon kann,</h1>
+                <h3 style="margin-left: 20%">"Wer immer das tut, was er schon kann,</h3>
             </div>
-            <div class="row">
-                <h1>"bleibt immer das, was er schon ist."</h1>
+            <div class="row" style="background: indianred">
+                <h3 style="color: #ffffff; margin-right: 20%" class="right">"bleibt immer das, was er schon ist."</h3>
             </div>
-                </div>
-    </div>
-    <div class="row">
-
-    </div>
-    <div class="row">
-
-    </div>
+        </div>
+        <div class="large-4 columns">
+            <h1>IC</h1>
+        </div>
+        <div class="large-4 columns">
+            <h1>IC</h1>
+        <h1>IC</h1>
+        <h1>IC</h1>
+        <h1>IC</h1><h1>IC</h1><h1>IC</h1><h1>IC</h1><h1>IC</h1>
+        <h1>IC</h1><h1>IC</h1><h1>IC</h1>
+        <h1>IC</h1>
+        <h1>IC</h1>
+        <h1>IC</h1><h1>IC</h1><h1>IC</h1>
+        </div>
+        <div class="large-4 columns">
+            <h1>IC</h1>
+        </div>
 {% endblock %}
