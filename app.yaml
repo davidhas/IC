@@ -8,11 +8,10 @@ handlers:
 
 - url: /static
   static_dir: static
-  mime_type: "text/css"
+  mime_type: text/css
 
 - url: /images
   static_dir: images
-  mime_type: "image/jpg"
 
 - url: /.*
   script: main.app
