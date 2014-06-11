@@ -7,7 +7,7 @@ threadsafe: true
 handlers:
 
 - url: /static
-  static_dir: sitestatic
+  static_dir: static
   mime_type: text/css
 
 - url: /images
