@@ -25,3 +25,38 @@ img.bg {
     margin-left: -512px;   /* 50% */
   }
 }
+
+.columns .header{
+    padding: 0;
+}
+
+.panel .header{
+    background-color: indianred;
+    border: 0;
+    height: 150px;
+    margin: 0;
+    padding-top: 15px
+}
+
+.row .header{
+    height: 75px;
+}
+
+#upper-header-row{
+    padding-top: 30px;
+    padding-left: 10%
+}
+
+#lower-header-row{
+    background-color: indianred;
+    padding-bottom: 30px;
+    padding-right: 10%
+}
+
+#upper-header-heading{
+    color: indianred;
+}
+
+#logo{
+    font-size: 80px
+}
