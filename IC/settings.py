@@ -78,6 +78,12 @@ STATICFILES_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+# Absolute path to directory in which media is stored
+MEDIA_ROOT = os.path.join('','files')
+
+# Url to access media via a web browser
+MEDIA_URL = '/media/'
+
 # List of finder classes that know how to find static files in
 # various locations.
 STATICFILES_FINDERS = (

@@ -1,14 +1,9 @@
-html {
-    background-image: url("../../../../images/background.jpg");
-    background-repeat: no-repeat;
-    background-position: right  top;
-    background-attachment:fixed;
-}
-
-h1 {
-    color: red;
-}
-
-div {
-    background-color: blue;
+html { 
+  background: url(/files/images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src='./images/background.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/background.jpg', sizingMethod='scale')";
 }
