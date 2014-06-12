@@ -1,18 +1,11 @@
 {% extends "foundation/base.html" %}
-{% load static %}
-{# Set the title of the website using the sitename from the context #}
-{% block title %}IC{% endblock %}
-{% block css %}
-{# Load the custom website styles #}
-<link rel="stylesheet" type="text/css" href="{% static 'stilwiese/css/basic.css' %}">
-{# Give subsides the possibility to specify custom css without overwriting the base css #}
-{% block base_css %}{% endblock %}
-{% endblock %}
-{% block base_body%}
 
+{% block base_body%}
+    <div class="row">
         <div class="large-12 columns">
             <div class="panel">
-                <h3>Hallo</h3>
+                <h1>Hallo</h1>
             </div>
         </div>
+    </div>
 {% endblock %}
