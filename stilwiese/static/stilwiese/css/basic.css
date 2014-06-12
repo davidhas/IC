@@ -1,6 +1,6 @@
 img.bg {
 
- filtyeer:alpha(opacity=25); /* IE */
+ filter:alpha(opacity=25); /* IE */
  -moz-opacity: 0.25; /* Mozilla */
  opacity: 0.25; /* Opera */
 
