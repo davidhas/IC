@@ -1,11 +1,7 @@
 html { 
-  background: url(../../../../images/background.jpg) no-repeat center center fixed;
+  background: url(../../../../images/background.jpg) no-repeat center center fixed ;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-  filter:alpha(opacity=25);
-  -moz-opacity: 0.25;
-  opacity: 0.25;">
 }
