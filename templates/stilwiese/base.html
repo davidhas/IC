@@ -1,4 +1,12 @@
 {% extends "foundation/base.html" %}
+{% load static %}
+
+{% block css %}
+{# Load the custom website styles #}
+<link rel="stylesheet" type="text/css" href="{% static 'stilwiese/css/basic.css' %}">
+{# Give subsides the possibility to specify custom css without overwriting the base css #}
+{% block base_body_css %}{% endblock %}
+{% endblock %}
 
 {% block base_body%}
     <div class="row">
