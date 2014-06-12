@@ -1,4 +1,10 @@
 img.bg {
+
+ filtyeer:alpha(opacity=25); /* IE */
+ -moz-opacity: 0.25; /* Mozilla */
+ opacity: 0.25; /* Opera */
+
+
   /* Set rules to fill background */
   min-height: 100%;
   min-width: 1024px;

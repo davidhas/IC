@@ -9,8 +9,8 @@ handlers:
 - url: /static
   static_dir: static
 
-- url: /images
-  static_dir: images
+- url: /files
+  static_dir: files
 
 - url: /.*
   script: main.app
