@@ -47,29 +47,34 @@ img.bg {
 }
 
 #upper-header-panel{
-    height: 100%;
+    height: auto;
+    min-height: 100%;
     margin: 0;
     position: relative;
     padding-bottom: 0.5%;
     padding-left: 20%;
+    padding-right: 20%;
 
     color: indianred;
     background: none;
     border: none;
 
+    display: table;
 }
 
 #upper-header-panel > div{
-    display: inline-block;
-    vertical-align: text-bottom;
+    display: table-cell;
+    vertical-align: bottom;
 }
 
 #lower-header-panel{
-    height: 100%;
+    height: auto;
+    min-height: 100%;
     margin: 0;
     position: relative;
     padding-top: 0.5%;
     padding-right: 20%;
+    padding-left: 20%;
 
     background-color: rgba(205,92,92,0.5);
     border: none;

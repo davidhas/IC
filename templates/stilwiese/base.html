@@ -20,18 +20,44 @@
         <div class="large-10 columns header">
             <div class="row header" id="upper-header-row">
                 <div class="panel header" id="upper-header-panel">
-                    <div class="heading" id="upper-header-heading">"Wer immer das tut, was er schon kann,</div>
+                    <div class="heading">"Wer immer das tut, was er schon kann,</div>
                 </div>
             </div>
             <div class="row header" id="lower-header-row">
                 <div class="panel header" id="lower-header-panel">
-                    <div class="heading right" id="lower-header-text">bleibt immer das, was er schon ist."</div>
+                    <div class="heading right">bleibt immer das, was er schon ist."</div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-
+    <div class="row" style="margin-top: 50px">
+        <div class="large-3 columns">
+            <ul class="orbit-container" data-orbit data-options="resume_on_mouseout: true; timer: true; animation: 'fade'; animation_speed: 1000">
+                {# Show orbit images. Images are referenced in templates by image.url using the media root defined in the settings #}
+  			    <li>
+    			    <img src="{% static "stilwiese/img/background.jpg" %}" alt="User-Image" style="height:300px; width: 100%"/>
+    			    <div class="orbit-caption">
+      				    Caption
+    			    </div>
+  			    </li>
+		    </ul>
+        </div>
+        <div class="large-6 columns">
+            <div class="flex-video vimeo">
+                <iframe height="350" width="100%" src="//www.youtube.com/embed/aiBt44rrslw" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="large-3 columns">
+            <ul class="orbit-container" data-orbit data-options="resume_on_mouseout: true; timer: true; animation: 'fade'; animation_speed: 1000">
+                {# Show orbit images. Images are referenced in templates by image.url using the media root defined in the settings #}
+  			    <li>
+    			    <img src="{% static "stilwiese/img/background.jpg" %}" alt="User-Image" style="height:300px; width: 100%"/>
+    			    <div class="orbit-caption">
+      				    Caption
+    			    </div>
+  			    </li>
+		    </ul>
+        </div>
     </div>
     <div class="row">
 
