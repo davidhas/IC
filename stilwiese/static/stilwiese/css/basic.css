@@ -12,7 +12,7 @@ img.bg {
   /* Set up proportionate scaling */
   width: 100%;
   height: auto;
-	
+
   /* Set up positioning */
   position: fixed;
   top: 0;
@@ -92,4 +92,8 @@ img.bg {
 
 .panel.header > .heading {
     font-size: 20px;
+}
+
+#content-row{
+    margin-top: 170px;
 }

@@ -11,6 +11,7 @@
 {% block base_body%}
     {# <img src="http://newevolutiondesigns.com/images/freebies/city-wallpaper-11.jpg" class="bg"/> #}
     <img src="{% static "stilwiese/img/background.jpg" %}" class="bg" alt=""/>
+    <div class="fixed">
     <div class="row header container">
         <div class="large-2 columns header" id="logo-column">
             <div class="panel text-center header" id="logo-panel">
@@ -30,33 +31,69 @@
             </div>
         </div>
     </div>
-    <div class="row" style="margin-top: 50px">
+    </div>
+    <div class="row" id="content-row">
         <div class="large-3 columns">
-            <ul class="orbit-container" data-orbit data-options="resume_on_mouseout: true; timer: true; animation: 'fade'; animation_speed: 1000">
-                {# Show orbit images. Images are referenced in templates by image.url using the media root defined in the settings #}
-  			    <li>
-    			    <img src="{% static "stilwiese/img/background.jpg" %}" alt="User-Image" style="height:300px; width: 100%"/>
-    			    <div class="orbit-caption">
-      				    Caption
-    			    </div>
-  			    </li>
-		    </ul>
+            <div class="row">
+                    <ul class="orbit-container" data-orbit data-options="resume_on_mouseout: true; timer: true; animation: 'fade'; animation_speed: 1000">
+                        {# Show orbit images. Images are referenced in templates by image.url using the media root defined in the settings #}
+                        <li>
+                            <img src="{% static "stilwiese/img/background.jpg" %}" alt="User-Image" style="height:300px; width: 100%"/>
+                            <div class="orbit-caption">
+                                Caption
+                            </div>
+                        </li>
+                    </ul>
+            </div>
+            <div class="row">
+                    <ul class="orbit-container" style="margin-left: auto; margin-right: auto; width: 50%" data-orbit data-options="resume_on_mouseout: true; timer: true; animation: 'fade'; animation_speed: 1000">
+                        {# Show orbit images. Images are referenced in templates by image.url using the media root defined in the settings #}
+                        <li>
+                            <img src="{% static "stilwiese/img/background.jpg" %}" alt="User-Image" style="height:150px; width: 100%"/>
+                            <div class="orbit-caption">
+                                Caption
+                            </div>
+                        </li>
+                    </ul>
+            </div>
         </div>
         <div class="large-6 columns">
-            <div class="flex-video vimeo">
-                <iframe height="350" width="100%" src="//www.youtube.com/embed/aiBt44rrslw" frameborder="0" allowfullscreen></iframe>
+            <div class="row">
+                <div class="large-12 columns">
+                    <div class="flex-video">
+                    <iframe height="350" width="100%" src="//www.youtube.com/embed/aiBt44rrslw?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-12 columns">
+                    <a href="" class="button expand radius">Zur Stilwiese</a>
+                </div>
             </div>
         </div>
         <div class="large-3 columns">
-            <ul class="orbit-container" data-orbit data-options="resume_on_mouseout: true; timer: true; animation: 'fade'; animation_speed: 1000">
-                {# Show orbit images. Images are referenced in templates by image.url using the media root defined in the settings #}
-  			    <li>
-    			    <img src="{% static "stilwiese/img/background.jpg" %}" alt="User-Image" style="height:300px; width: 100%"/>
-    			    <div class="orbit-caption">
-      				    Caption
-    			    </div>
-  			    </li>
-		    </ul>
+            <div class="row">
+                    <ul class="orbit-container" data-orbit data-options="resume_on_mouseout: true; timer: true; animation: 'fade'; animation_speed: 1000">
+                        {# Show orbit images. Images are referenced in templates by image.url using the media root defined in the settings #}
+                        <li>
+                            <img src="{% static "stilwiese/img/background.jpg" %}" alt="User-Image" style="height:300px; width: 100%"/>
+                            <div class="orbit-caption">
+                                Caption
+                            </div>
+                        </li>
+                    </ul>
+            </div>
+            <div class="row">
+                    <ul class="orbit-container" style="margin-left: auto; margin-right: auto; width: 50%" data-orbit data-options="resume_on_mouseout: true; timer: true; animation: 'fade'; animation_speed: 1000">
+                        {# Show orbit images. Images are referenced in templates by image.url using the media root defined in the settings #}
+                        <li>
+                            <img src="{% static "stilwiese/img/background.jpg" %}" alt="User-Image" style="height:150px; width: 100%"/>
+                            <div class="orbit-caption">
+                                Caption
+                            </div>
+                        </li>
+                    </ul>
+            </div>
         </div>
     </div>
     <div class="row">
