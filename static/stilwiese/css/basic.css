@@ -98,3 +98,8 @@ img.bg {
     margin-top: 170px;
 }
 
+
+.orbit-next, .orbit-prev{
+    display: none;
+}
+
