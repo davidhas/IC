@@ -14,11 +14,10 @@
 {% endblock head_js %}
 {% block body_js %}
     <script>
-        $("#orbit1").on("after-slide-change.fndtn.orbit", function(event, orbit) {
-            $('#slide'+(orbit.slide_number+1)).click();
-            /* $("#orbit2").siblings(".orbit-next").click(); */
+        $('.left-bullet').on('click', function(event){
+           $('.left-bullet').removeClass('active')
+           $(event.target).addClass('active')
         });
-
     </script>
 
 {% endblock body_js %}
@@ -26,7 +25,16 @@
 {% block base_body%}
     {# <img src="http://newevolutiondesigns.com/images/freebies/city-wallpaper-11.jpg" class="bg"/> #}
     <img src="{% static "stilwiese/img/background.jpg" %}" class="bg" alt=""/>
+    <div class="fixed header">
+        <div class="upper-background">
 
+        </div>
+        <div class="lower-background">
+
+        </div>
+
+    </div>
+    <div class="fixed">
     <div class="row header container">
         <div class="medium-2 large-2 columns header" id="logo-column">
             <div class="panel text-center header" id="logo-panel">
@@ -46,25 +54,25 @@
             </div>
         </div>
     </div>
-
+    </div>
     <div class="row" id="content-row">
         <div class="medium-3 large-3 columns">
             <div class="row">
-                    <ul class="orbit-container" id="orbit1" data-orbit data-options="pause_on_hover: true; resume_on_mouseout: true; animation: 'fade'; animation_speed: 1000;">
+                    <ul class="orbit-container" id="orbit1" data-orbit data-options="bullets: false; slide_number: false; pause_on_hover: true; resume_on_mouseout: true; animation: 'fade'; animation_speed: 1000;">
                         {# Show orbit images. Images are referenced in templates by image.url using the media root defined in the settings #}
-                        <li>
+                        <li data-orbit-slide="left_1">
                             <img src="{% static "stilwiese/img/background.jpg" %}" alt="User-Image" style="height:300px; width: 100%"/>
                             <div class="orbit-caption">
                                 Caption
                             </div>
                         </li>
-                        <li>
+                        <li data-orbit-slide="left_2">
                             <img src="{% static "http://www.eroglamour.com/glamour/20110723/fasionpicturessetaw2011/10-fasion-pictures.-set-aw-2011.jpg" %}" alt="User-Image" style="height:300px; width: 100%"/>
                             <div class="orbit-caption">
                                 Caption
                             </div>
                         </li>
-                        <li>
+                        <li data-orbit-slide="left_3">
                             <img src="{% static "http://www.eroglamour.com/glamour/20110723/fasionpicturessetaw2011/www.eroglamour.com-12-fasion-pictures.-set-aw-2011.jpg" %}" alt="User-Image" style="height:300px; width: 100%"/>
                             <div class="orbit-caption">
                                 Caption
@@ -72,32 +80,35 @@
                         </li>
 
                     </ul>
+                <ol class="orbit-bullets">
+                  <li class="left-bullet active" data-orbit-link="left_1"></li>
+                  <li class="left-bullet" data-orbit-link="left_2"></li>
+                  <li class="left-bullet" data-orbit-link="left_3"></li>
+                </ol>
+
             </div>
             <div class="row">
                     <ul class="orbit-container" id="orbit2" style="margin-left: auto; margin-right: auto; width: 50%" data-orbit data-options="bullets: false; slide_number:false; pause_on_hover: false; timer_show_progress_bar: false; timer: false; animation: 'fade'; animation_speed: 1000">
                         {# Show orbit images. Images are referenced in templates by image.url using the media root defined in the settings #}
-                        <li data-orbit-slide="orbit2_1">
+                        <li data-orbit-slide="left_1">
                             <img src="{% static "stilwiese/img/background.jpg" %}" alt="User-Image" style="height:150px; width: 100%"/>
                             <div class="orbit-caption">
                                 Caption
                             </div>
                         </li>
-                        <li data-orbit-slide="orbit2_2">
+                        <li data-orbit-slide="left_2">
                             <img src="{% static "http://www.eroglamour.com/glamour/20110723/fasionpicturessetaw2011/10-fasion-pictures.-set-aw-2011.jpg" %}" alt="User-Image" style="height:150px; width: 100%"/>
                             <div class="orbit-caption">
                                 Caption
                             </div>
                         </li>
-                        <li data-orbit-slide="orbit2_3">
+                        <li data-orbit-slide="left_3">
                             <img src="{% static "http://www.eroglamour.com/glamour/20110723/fasionpicturessetaw2011/www.eroglamour.com-12-fasion-pictures.-set-aw-2011.jpg" %}" alt="User-Image" style="height:150px; width: 100%"/>
                             <div class="orbit-caption">
                                 Caption
                             </div>
                         </li>
                     </ul>
-                <a id='slide1' data-orbit-link="orbit2_1"></a>
-                <a id='slide2' data-orbit-link="orbit2_2"></a>
-                <a id='slide3' data-orbit-link="orbit2_3"></a>
             </div>
         </div>
         <div class="medium-6 large-6 columns">

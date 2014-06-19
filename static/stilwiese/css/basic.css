@@ -1,8 +1,8 @@
 img.bg {
 
- filter:alpha(opacity=25); /* IE */
- -moz-opacity: 0.25; /* Mozilla */
- opacity: 0.25; /* Opera */
+ /* filter:alpha(opacity=25); /* IE */
+ /* -moz-opacity: 0.25; /* Mozilla */
+ /* opacity: 0.25; /* Opera */
 
 
   /* Set rules to fill background */
@@ -26,6 +26,24 @@ img.bg {
   }
 }
 
+.fixed.header{
+    height: 120px;
+    width: 100%
+    background-color: green;
+}
+
+.fixed.header > .upper-background{
+    background-color: rgba(255,255,255,0.7);
+    height: 60%;
+    width: 100%
+}
+
+.fixed.header > .lower-background{
+    background-color: rgba(205,92,92,0.7);
+    height: 40%;
+    width: 100%
+}
+
 .header.container{
     height: 120px;
 }
@@ -40,7 +58,7 @@ img.bg {
 
 #logo-panel{
     margin: 0;
-    height: 100%;
+    height: 120%;
 
     background-color: indianred;
     border: none;
@@ -74,7 +92,7 @@ img.bg {
     padding-right: 20%;
     padding-left: 20%;
 
-    background-color: rgba(205,92,92,0.5);
+    background: none;
     border: none;
 }
 
@@ -99,7 +117,7 @@ img.bg {
 }
 
 
-.orbit-next, .orbit-prev{
+.orbit-next, .orbit-prev, .orbit-timer{
     display: none;
 }
 
