@@ -14,10 +14,111 @@
 {% endblock head_js %}
 {% block body_js %}
     <script>
-        $('.left-bullet').on('click', function(event){
+        /*$('.left-bullet').on('click', function(event){
            $('.left-bullet').removeClass('active')
            $(event.target).addClass('active')
+        });*/
+        clicked_1 = false;
+        clicked_3 = false;
+
+        $('#orbit1').on('after-slide-change.fndtn.orbit', function(event, orbit) {
+             var link = $('li[data-orbit-link="left_'+(orbit.slide_number+1)+'"]');
+             link.siblings().removeClass('active');
+             link.addClass('active');
+             $("#orbit1").siblings(".paused").click();
+             $("#orbit2").siblings(".paused").click();
         });
+
+         $('.left-bullet').on('click', function (){
+            clicked_1 = true
+        })
+
+         $('#orbit1').on('before-slide-change.fndtn.orbit', function(event) {
+             if (clicked_1){
+                 clicked_1 = false;
+             }
+             else{
+                 $("#orbit2").siblings(".orbit-next").click();
+             }
+        });
+
+        $('#orbit1').on('mouseover', function(event) {
+            $("#orbit2").siblings(".orbit-timer").click();
+        });
+
+        $('#orbit1').on('mouseout', function(event) {
+            $("#orbit2").siblings(".paused").click();
+        });
+
+         $('#orbit2').on('mouseover', function(event) {
+            $("#orbit1").siblings(".orbit-timer").click();
+        });
+
+        $('#orbit2').on('mouseout', function(event) {
+            $("#orbit1").siblings(".paused").click();
+        });
+
+        $('#orbit1').on('click', function(event) {
+            $("#orbit2").siblings(".orbit-next").click();
+        });
+
+        $('#orbit2').on('click', function(event) {
+            $("#orbit1").siblings(".orbit-next").click();
+        });
+
+
+        $('#orbit3').on('after-slide-change.fndtn.orbit', function(event, orbit) {
+             var link = $('li[data-orbit-link="right_'+(orbit.slide_number+1)+'"]');
+             link.siblings().removeClass('active');
+             link.addClass('active');
+             $("#orbit3").siblings(".paused").click();
+             $("#orbit4").siblings(".paused").click();
+        });
+
+         $('.right-bullet').on('click', function (){
+            clicked_3 = true
+        })
+
+         $('#orbit4').on('before-slide-change.fndtn.orbit', function(event) {
+             if (clicked_3){
+                 clicked_3 = false;
+             }
+             else{
+                 $("#orbit4").siblings(".orbit-next").click();
+             }
+        });
+
+        $('#orbit3').on('mouseover', function(event) {
+            $("#orbit4").siblings(".orbit-timer").click();
+        });
+
+        $('#orbit3').on('mouseout', function(event) {
+            $("#orbit4").siblings(".paused").click();
+        });
+
+         $('#orbit4').on('mouseover', function(event) {
+            $("#orbit3").siblings(".orbit-timer").click();
+        });
+
+        $('#orbit4').on('mouseout', function(event) {
+            $("#orbit3").siblings(".paused").click();
+        });
+
+        $('#orbit3').on('click', function(event) {
+            $("#orbit4").siblings(".orbit-next").click();
+        });
+
+        $('#orbit4').on('click', function(event) {
+            $("#orbit3").siblings(".orbit-next").click();
+        });
+
+        /*$('#orbit1').on('after-slide-change.fndtn.orbit', function(event) {
+             $('#slide'+(orbit.slide_number+1)).click();
+
+          alert($('.orbit-bullets').find('.active').attr('data-orbit-slide'));
+             $("#orbit2").siblings(".orbit-next").click();
+        }); */
+
     </script>
 
 {% endblock body_js %}
@@ -58,7 +159,7 @@
     <div class="row" id="content-row">
         <div class="medium-3 large-3 columns">
             <div class="row">
-                    <ul class="orbit-container" id="orbit1" data-orbit data-options="bullets: false; slide_number: false; pause_on_hover: true; resume_on_mouseout: true; animation: 'fade'; animation_speed: 1000;">
+                    <ul class="orbit-container" id="orbit1" data-orbit data-options="next_on_click: true; bullets: false; slide_number: false; pause_on_hover: true; resume_on_mouseout: true; animation: 'fade'; animation_speed: 1000;">
                         {# Show orbit images. Images are referenced in templates by image.url using the media root defined in the settings #}
                         <li data-orbit-slide="left_1">
                             <img src="{% static "stilwiese/img/background.jpg" %}" alt="User-Image" style="height:300px; width: 100%"/>
@@ -88,7 +189,7 @@
 
             </div>
             <div class="row">
-                    <ul class="orbit-container" id="orbit2" style="margin-left: auto; margin-right: auto; width: 50%" data-orbit data-options="bullets: false; slide_number:false; pause_on_hover: false; timer_show_progress_bar: false; timer: false; animation: 'fade'; animation_speed: 1000">
+                    <ul class="orbit-container" id="orbit2" style="margin-left: auto; margin-right: auto; width: 50%" data-orbit data-options="resume_on_mouseout: true; pause_on_hover: true; bullets: false; slide_number:false; timer_show_progress_bar: false; timer: false; animation: 'fade'; animation_speed: 1000">
                         {# Show orbit images. Images are referenced in templates by image.url using the media root defined in the settings #}
                         <li data-orbit-slide="left_1">
                             <img src="{% static "stilwiese/img/background.jpg" %}" alt="User-Image" style="height:150px; width: 100%"/>
@@ -127,21 +228,52 @@
         </div>
         <div class="medium-3 large-3 columns">
             <div class="row">
-                    <ul class="orbit-container" data-orbit data-options="resume_on_mouseout: true; timer: true; animation: 'fade'; animation_speed: 1000">
+                    <ul class="orbit-container" id="orbit3" data-orbit data-options="bullets: false; slide_number: false; pause_on_hover: true; resume_on_mouseout: true; animation: 'fade'; animation_speed: 1000;">
                         {# Show orbit images. Images are referenced in templates by image.url using the media root defined in the settings #}
-                        <li>
+                        <li data-orbit-slide="right_1">
                             <img src="{% static "stilwiese/img/background.jpg" %}" alt="User-Image" style="height:300px; width: 100%"/>
                             <div class="orbit-caption">
                                 Caption
                             </div>
                         </li>
+                        <li data-orbit-slide="right_2">
+                            <img src="{% static "http://www.eroglamour.com/glamour/20110723/fasionpicturessetaw2011/10-fasion-pictures.-set-aw-2011.jpg" %}" alt="User-Image" style="height:300px; width: 100%"/>
+                            <div class="orbit-caption">
+                                Caption
+                            </div>
+                        </li>
+                        <li data-orbit-slide="right_3">
+                            <img src="{% static "http://www.eroglamour.com/glamour/20110723/fasionpicturessetaw2011/www.eroglamour.com-12-fasion-pictures.-set-aw-2011.jpg" %}" alt="User-Image" style="height:300px; width: 100%"/>
+                            <div class="orbit-caption">
+                                Caption
+                            </div>
+                        </li>
+
                     </ul>
+                <ol class="orbit-bullets">
+                  <li class="right-bullet active" data-orbit-link="right_1"></li>
+                  <li class="right-bullet" data-orbit-link="right_2"></li>
+                  <li class="right-bullet" data-orbit-link="right_3"></li>
+                </ol>
+
             </div>
             <div class="row">
-                    <ul class="orbit-container" style="margin-left: auto; margin-right: auto; width: 50%" data-orbit data-options="resume_on_mouseout: true; timer: true; animation: 'fade'; animation_speed: 1000">
+                    <ul class="orbit-container" id="orbit4" style="margin-left: auto; margin-right: auto; width: 50%" data-orbit data-options="resume_on_mouseout: true; pause_on_hover: true; bullets: false; slide_number:false; timer_show_progress_bar: false; timer: false; animation: 'fade'; animation_speed: 1000">
                         {# Show orbit images. Images are referenced in templates by image.url using the media root defined in the settings #}
-                        <li>
+                        <li data-orbit-slide="right_1">
                             <img src="{% static "stilwiese/img/background.jpg" %}" alt="User-Image" style="height:150px; width: 100%"/>
+                            <div class="orbit-caption">
+                                Caption
+                            </div>
+                        </li>
+                        <li data-orbit-slide="right_2">
+                            <img src="{% static "http://www.eroglamour.com/glamour/20110723/fasionpicturessetaw2011/10-fasion-pictures.-set-aw-2011.jpg" %}" alt="User-Image" style="height:150px; width: 100%"/>
+                            <div class="orbit-caption">
+                                Caption
+                            </div>
+                        </li>
+                        <li data-orbit-slide="right_3">
+                            <img src="{% static "http://www.eroglamour.com/glamour/20110723/fasionpicturessetaw2011/www.eroglamour.com-12-fasion-pictures.-set-aw-2011.jpg" %}" alt="User-Image" style="height:150px; width: 100%"/>
                             <div class="orbit-caption">
                                 Caption
                             </div>
