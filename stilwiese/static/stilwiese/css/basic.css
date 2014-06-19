@@ -117,7 +117,7 @@ img.bg {
 }
 
 
-.orbit-next, .orbit-prev{
+.orbit-next, .orbit-prev, .orbit-timer{
     display: none;
 }
 
