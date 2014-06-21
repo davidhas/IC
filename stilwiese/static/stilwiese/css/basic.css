@@ -112,10 +112,11 @@ img.bg {
     font-size: 20px;
 }
 
-#content-row{
+/* From here, new css file */
+
+.row.content{
     margin-top: 170px;
 }
-
 
 .orbit-next, .orbit-prev, .orbit-timer{
     display: none;

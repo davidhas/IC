@@ -1,0 +1,33 @@
+{% extends 'stilwiese/base.html' %}
+{% load static %}
+
+{% block my_css %}
+    <link rel="stylesheet" href="{% static 'stilwiese/css/jquery-jvectormap.css' %}" type="text/css" media="screen"/>
+{% endblock %}
+
+{% block my_head_js %}
+{% endblock %}
+
+{% block my_body_js %}
+    <script src="{% static 'stilwiese/js/jquery.jvectormap.min.js' %}"></script>
+    <script src="{% static 'stilwiese/js/jquery-jvectormap-de-mill-en.js' %}"></script>
+    <script>
+    $(function(){
+        $('#map').vectorMap({
+            map: 'de_mill_en'
+        });
+    });
+    </script>
+{% endblock %}
+
+{% block body %}
+<div class="row content">
+<div class="large-6 columns">
+<div id="map" style="height: 600px">
+</div>
+</div>
+<div class="large-6 columns">
+
+</div>
+</div>
+{% endblock %}

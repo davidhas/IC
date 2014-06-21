@@ -4,7 +4,15 @@ from django.shortcuts import render
 
 def index(request):
     """
-    View that gets the context variables for the index site body and renders the RequestContext
+    View for index site
     """
 
-    return render(request, 'stilwiese/base.html')
+    return render(request, 'stilwiese/index.html')
+
+
+def map(request):
+    """
+    View for site containing map
+    """
+
+    return render(request, 'stilwiese/map.html')
