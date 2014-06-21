@@ -14,19 +14,25 @@
     <script>
     $(function(){
         $('#map').vectorMap({
-            map: 'de_mill_en'
+            map: 'de_mill_en',
+            //backgroundColor: ['blue'],
+            zoomOnScroll: false,
+            markers: [
+                {latLng: [48.813,11.3437], name: 'München'}
+            ]
         });
     });
+
     </script>
 {% endblock %}
 
 {% block body %}
 <div class="row content">
-<div class="large-6 columns">
+<div class="large-5 columns">
 <div id="map" style="height: 600px">
 </div>
 </div>
-<div class="large-6 columns">
+<div class="large-7 columns">
 
 </div>
 </div>
