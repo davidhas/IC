@@ -5,7 +5,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-                       url(r'^/', include('stilwiese.urls')),
+                       url(r'^', include('stilwiese.urls')),
                        url(r'^foundation/', include('foundation.urls')),
     # Examples:
     # url(r'^$', 'IC.views.home', name='home'),
