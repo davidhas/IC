@@ -1,0 +1,23 @@
+.columns.pictures{
+}
+
+.panel.pictures{
+    background-color: indianred;
+}
+
+
+.picture.one{
+    vertical-align: bottom;
+    width: 30%;
+    margin-right: 10%;
+}
+
+.picture.two{
+    vertical-align: bottom;
+    width: 25%;
+}
+
+.picture.three{
+    vertical-align: bottom;
+    width: 25%;
+}

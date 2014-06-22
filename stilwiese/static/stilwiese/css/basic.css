@@ -125,14 +125,8 @@ body {
     font-size: 20px;
 }
 
-/* From here, new css file */
-
 .row.content{
     margin-top: 170px;
-}
-
-.orbit-next, .orbit-prev, .orbit-timer{
-    display: none;
 }
 
 .footer{
