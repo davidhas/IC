@@ -5,6 +5,16 @@
     background-color: indianred;
 }
 
+.picture.two:before, .picture.three.right:before {
+  content: '';
+  display: inline-block;
+  height: 25%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+/* The element to be centered, can
+   also be of any width and height */
 
 .picture.one{
     vertical-align: bottom;
@@ -13,11 +23,13 @@
 }
 
 .picture.two{
+    display: inline-block;
+    width: 100%;
     vertical-align: bottom;
-    width: 25%;
 }
 
-.picture.three{
+.picture.three.right{
+    display: inline-block;
+    width: 100%;
     vertical-align: bottom;
-    width: 25%;
 }

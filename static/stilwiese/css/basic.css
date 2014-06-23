@@ -92,7 +92,7 @@ body {
     display: table;
 }
 
-#upper-header-row > div{
+#upper-header-panel > div{
     display: table-cell;
     vertical-align: bottom;
 }
