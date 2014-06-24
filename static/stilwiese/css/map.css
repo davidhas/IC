@@ -6,11 +6,8 @@
     background-color: indianred;
     width: 100%;
     text-align: center;
-}
-
-.panel.subtexts{
-    text-align: center;
-    width: 100%;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
 }
 
 .picture.two:before, .picture.three:before {
@@ -20,22 +17,34 @@
   vertical-align: bottom;
 }
 
-/* The element to be centered, can
-   also be of any width and height */
-
-.picture.one{
+.picture.one, .subtext.one{
+    display: inline-block;
+    vertical-align: bottom;
     width: 30%;
     margin-right: 5%;
 }
 
-.picture.two{
+.picture.two, .picture.three, .subtext.two, .subtext.three{
     display: inline-block;
     vertical-align: bottom;
     width: 27%;
 }
 
-.picture.three{
-    display: inline-block;
-    vertical-align: bottom;
-    width: 27%;
+.panel.subtexts{
+    text-align: center;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+}
+
+.subtext{
+    margin: 0;
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+.panel.subtext{
+    padding: 0.3rem;
+    margin: 0;
 }

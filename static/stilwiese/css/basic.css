@@ -41,7 +41,7 @@ body {
 }
 
 .fixed.header{
-    height: 120px;
+    height: 7.5rem;
     width: 100%
 }
 
@@ -58,7 +58,7 @@ body {
 }
 
 .header.container{
-    height: 120px;
+    height: 7.5rem;
 }
 
 .header.columns{
@@ -71,7 +71,7 @@ body {
 
 #logo-panel{
     margin: 0;
-    height: 120%;
+    height: 9rem;
 
     background-color: indianred;
     border: none;
@@ -117,20 +117,31 @@ body {
     height: 40%;
 }
 
+
+#logo:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
 #logo{
-    font-size: 80px;
+    font-size: 5rem;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .panel.header > .heading {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .row.content{
-    margin-top: 170px;
+    margin-top: 10.6rem;
 }
 
 .footer{
     background-color: indianred;
-    height: 250px;
+    height: 20rem;
     margin-top: 50px;
 }
