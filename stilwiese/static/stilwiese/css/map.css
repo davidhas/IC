@@ -24,7 +24,6 @@
    also be of any width and height */
 
 .picture.one{
-    vertical-align: bottom;
     width: 30%;
     margin-right: 5%;
 }
@@ -32,11 +31,11 @@
 .picture.two{
     display: inline-block;
     vertical-align: bottom;
-    width: 25%;
+    width: 27%;
 }
 
 .picture.three{
     display: inline-block;
     vertical-align: bottom;
-    width: 25%;
+    width: 27%;
 }

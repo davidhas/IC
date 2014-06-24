@@ -1,35 +1,41 @@
 .columns.pictures{
+    display: inline-block;
 }
 
 .panel.pictures{
     background-color: indianred;
+    width: 100%;
+    text-align: center;
 }
 
-.picture.two:before, .picture.three.right:before {
+.panel.subtexts{
+    text-align: center;
+    width: 100%;
+}
+
+.picture.two:before, .picture.three:before {
   content: '';
   display: inline-block;
-  height: 25%;
-  vertical-align: middle;
-  margin-right: -0.25em; /* Adjusts for spacing */
+  height: 100%;
+  vertical-align: bottom;
 }
 
 /* The element to be centered, can
    also be of any width and height */
 
 .picture.one{
-    vertical-align: bottom;
     width: 30%;
-    margin-right: 10%;
+    margin-right: 5%;
 }
 
 .picture.two{
     display: inline-block;
-    width: 100%;
     vertical-align: bottom;
+    width: 27%;
 }
 
-.picture.three.right{
+.picture.three{
     display: inline-block;
-    width: 100%;
     vertical-align: bottom;
+    width: 27%;
 }
