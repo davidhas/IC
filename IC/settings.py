@@ -132,6 +132,7 @@ INSTALLED_APPS = (
     'foundation',
     'django.contrib.admin',
     'stilwiese',
+    'jquery_ui',
     # Uncomment the next line to enable the admin:
     # Uncomment the next line to enable admin documentation:
 )

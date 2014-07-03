@@ -12,6 +12,7 @@
 {% block my_body_js %}
     <script src="{% static 'stilwiese/js/jquery.jvectormap.min.js' %}"></script>
     <script src="{% static 'stilwiese/js/jquery-jvectormap-de-mill-en.js' %}"></script>
+    <script src="{% static 'jquery_ui/js/jquery-ui.js' %}"></script>
     <script>
     $(function(){
         $('#map').vectorMap({
@@ -24,6 +25,22 @@
         });
     });
 
+    $(document).ready(function(){
+        (".news").each().effect( "bounce", "slow" );
+        setInterval(newsticker, 500);
+    });
+
+    i = 0;
+    newsticker = function(){
+        var len = $(".news").length;
+        if (i===len-1){
+            i = 0;
+        };
+        $(".news").get(i).hide( "drop", { direction: "down" }, "slow" );
+        $(".news").get(i+1).show("fade", "swing", 200);
+        i++;
+    };
+
     </script>
 {% endblock %}
 
@@ -35,46 +52,82 @@
     <div class="large-6 columns"  data-equalizer-watch>
         <div class="row">
             <div class="large-12 columns">
-            <div class="panel" style="background-color: rgba(100,100,100,0.95)">
+            <div class="panel newsticker">
                 <h2><u>Newsticker:</u></h2>
+                <div class="news">
                 <ul>
                     <li>Diesen Monat ist das Thema black & white im Programm - Gründe dein Team, sammle ICs und gewinne...</li>
                 </ul>
+                </div>
+                <div class="news">
+                <ul>
+                    <li>Mach mit bei unserem großen black & white Gewinnspiel und gründe dein Team...</li>
+                </ul>
+                </div>
             </div>
             </div>
         </div>
         <div class="row">
             <div class="large-12 columns pictures">
-                <div class="panel pictures">
+                <div class="panel pictures" id="upper-pictures-panel">
                     <img class="picture one" src="http://www.wallaceandgarcia.com/public/images/attoney_pics/no-picture-normal.png">
                     <img class="picture two" src="http://www.wallaceandgarcia.com/public/images/attoney_pics/no-picture-normal.png">
                     <img class="picture three" src="http://www.wallaceandgarcia.com/public/images/attoney_pics/no-picture-normal.png">
                 </div>
                 <div class="panel subtexts">
                     <div class="subtext one">
-                        <div>
-                            <div>Laura</div><div class="panel subtext right">ICu</div>
-                        <div>200.000 WCs</div>
+                        <div class="subtext name">
+                            Sandra<br>
+                            200.000 WCs
                         </div>
+                        <div class="panel subtext first">IC<span class="u">u</span></div>
                     </div>
                     <div class="subtext two">
-                        <div>Laura</div>
-                        <div>200 WCs</div>
+                        <div class="subtext name">
+                            Sandra<br>
+                            200 WCs
+                        </div>
+                        <div class="panel subtext">IC<span class="u">u</span></div>
                     </div>
                     <div class="subtext three">
-                        <div>Laura</div>
-                        <div>200 WCs</div>
+                        <div class="subtext name">
+                            Sandra<br>
+                            200 WCs
+                        </div>
+                        <div class="panel subtext">IC<span class="u">u</span></div>
                     </div>
-
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="large-12 columns pictures">
-                <div class="panel pictures">
+                <div class="panel pictures" id="lower-pictures-panel">
                     <img class="picture one" src="http://www.wallaceandgarcia.com/public/images/attoney_pics/no-picture-normal.png">
                     <img class="picture two" src="http://www.wallaceandgarcia.com/public/images/attoney_pics/no-picture-normal.png">
                     <img class="picture three" src="http://www.wallaceandgarcia.com/public/images/attoney_pics/no-picture-normal.png">
+                </div>
+                <div class="panel subtexts" id="lower-subtexts-panel">
+                    <div class="subtext one">
+                        <div class="subtext name">
+                            Markus<br>
+                            200.000 WCs
+                        </div>
+                        <div class="panel subtext first">IC<span class="u">u</span></div>
+                    </div>
+                    <div class="subtext two">
+                        <div class="subtext name">
+                            Markus<br>
+                            200 WCs
+                        </div>
+                        <div class="panel subtext">IC<span class="u">u</span></div>
+                    </div>
+                    <div class="subtext three">
+                        <div class="subtext name">
+                            Markus<br>
+                            200 WCs
+                        </div>
+                        <div class="panel subtext">IC<span class="u">u</span></div>
+                    </div>
                 </div>
             </div>
         </div>
