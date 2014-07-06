@@ -12,7 +12,7 @@
 {% block my_body_js %}
     <script src="{% static 'stilwiese/js/jquery.jvectormap.min.js' %}"></script>
     <script src="{% static 'stilwiese/js/jquery-jvectormap-de-mill-en.js' %}"></script>
-    <script src="{% static 'jquery_ui/js/jquery-ui.js' %}"></script>
+
     <script>
 
     set_orbit_height = function(){
@@ -22,29 +22,29 @@
          maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
        });
        $('.orbit-container').height(maxHeight);
-    }
+    };
 
     set_map_height = function(){
        var height = $("#right-column").height();
        $("#left-column").height(height);
-    }
+    };
 
-    $(document).ready(function(){
-       set_orbit_height();
-       $(".orbit-container").find(".paused").click();
-       set_map_height();
-
-       $(function(){
+    init_map = function() {
         $('#map').vectorMap({
             map: 'de_mill_en',
             //backgroundColor: ['blue'],
             zoomOnScroll: false,
             markers: [
-                {latLng: [48.13333333333333,11.516666666666667], name: 'München'}
+                {latLng: [48.13333333333333, 11.516666666666667], name: 'München'}
             ]
         });
-    });
-    });
+    };
+
+    set_orbit_height();
+    $(".orbit-container").find(".paused").click();
+    set_map_height();
+    init_map();
+
 
 
     $(window).resize(function(){
