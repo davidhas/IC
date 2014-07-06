@@ -15,4 +15,11 @@ def map(request):
     View for site containing map
     """
 
-    return render(request, 'stilwiese/map.html')
+    return render(request, 'stilwiese/map.html')#
+
+def blog(request):
+    """
+    View for site containing map
+    """
+
+    return render(request, 'stilwiese/blog.html')

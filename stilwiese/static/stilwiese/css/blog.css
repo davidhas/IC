@@ -1,0 +1,50 @@
+.fashion-picture > img{
+    width: 100%;
+}
+
+.comments-panel{
+    padding-bottom: 0.5rem;
+}
+
+.comments{
+    display: none;
+}
+
+.comment-panel{
+    display: table;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.comments-link > div{
+    margin-bottom: 0.3rem;
+}
+
+.picture{
+    display: table-cell;
+}
+
+.picture > img{
+    margin-right: 0.5rem;
+    height: 50px;
+}
+
+.comment-wrapper{
+    display: table-cell;
+    vertical-align: top;
+}
+
+.user{
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.comment{
+    font-size: 0.85rem;
+}
