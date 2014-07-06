@@ -14,7 +14,27 @@
     <script src="{% static 'stilwiese/js/jquery-jvectormap-de-mill-en.js' %}"></script>
     <script src="{% static 'jquery_ui/js/jquery-ui.js' %}"></script>
     <script>
-    $(function(){
+
+    set_orbit_height = function(){
+       var maxHeight = -1;
+
+       $('.orbit-slide').each(function() {
+         maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
+       });
+       $('.orbit-container').height(maxHeight);
+    }
+
+    set_map_height = function(){
+       var height = $("#right-column").height();
+       $("#left-column").height(height);
+    }
+
+    $(document).ready(function(){
+       set_orbit_height();
+       $(".orbit-container").find(".paused").click();
+       set_map_height();
+
+       $(function(){
         $('#map').vectorMap({
             map: 'de_mill_en',
             //backgroundColor: ['blue'],
@@ -24,46 +44,42 @@
             ]
         });
     });
-
-    $(document).ready(function(){
-        (".news").each().effect( "bounce", "slow" );
-        setInterval(newsticker, 500);
     });
 
-    i = 0;
-    newsticker = function(){
-        var len = $(".news").length;
-        if (i===len-1){
-            i = 0;
-        };
-        $(".news").get(i).hide( "drop", { direction: "down" }, "slow" );
-        $(".news").get(i+1).show("fade", "swing", 200);
-        i++;
-    };
+
+    $(window).resize(function(){
+      set_orbit_height();
+    });
 
     </script>
 {% endblock %}
 
 {% block body %}
-<div class="row content" data-equalizer>
-    <div class="large-6 columns" data-equalizer-watch>
-        <div id="map" style="height: 100%"></div>
+<div class="row content">
+    <div class="large-6 columns" id="left-column">
+        <div id="map"></div>
     </div>
-    <div class="large-6 columns"  data-equalizer-watch>
+    <div class="large-6 columns" id="right-column">
         <div class="row">
             <div class="large-12 columns">
             <div class="panel newsticker">
                 <h2><u>Newsticker:</u></h2>
-                <div class="news">
-                <ul>
-                    <li>Diesen Monat ist das Thema black & white im Programm - Gründe dein Team, sammle ICs und gewinne...</li>
+                <ul class="orbit-container" data-orbit data-options="bullets: false; slide_number: false; pause_on_hover: true; resume_on_mouseout: true; animation_speed: 800; navigation_arrows: false;">
+                        <li class="orbit-slide">
+                            <h5>Diesen Monat ist das Thema black & white im Programm - Gründe dein Team, sammle ICs und gewinne...</h5>
+                        </li>
+                        <li class="orbit-slide">
+                            <h5>Mach mit bei unserem großen black & white Gewinnspiel und gründe dein Team...</h5>
+                        </li>
+                        <li class="orbit-slide">
+                            <h5>Mach mit bei unserem großen black & white Gewinnspiel und gründe dein Team...
+                            Mach mit bei unserem großen black & white Gewinnspiel und gründe dein Team...
+                            Mach mit bei unserem großen black & white Gewinnspiel und gründe dein Team...
+                            Mach mit bei unserem großen black & white Gewinnspiel und gründe dein Team...
+                            Mach mit bei unserem großen black & white Gewinnspiel und gründe dein Team...</h5>
+                        </li>
                 </ul>
-                </div>
-                <div class="news">
-                <ul>
-                    <li>Mach mit bei unserem großen black & white Gewinnspiel und gründe dein Team...</li>
-                </ul>
-                </div>
+
             </div>
             </div>
         </div>
