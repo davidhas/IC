@@ -27,6 +27,7 @@
     set_map_height = function(){
        var height = $("#right-column").height();
        $("#left-column").height(height);
+       init_map();
     };
 
     init_map = function() {
@@ -43,7 +44,6 @@
     set_orbit_height();
     $(".orbit-container").find(".paused").click();
     set_map_height();
-    init_map();
 
 
 
