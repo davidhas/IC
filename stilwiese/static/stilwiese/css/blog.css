@@ -1,9 +1,14 @@
 .fashion-picture > img{
-    width: 100%;
+    width: 75%;
+}
+
+.fashion-picture.push-7{
+    text-align: right;
 }
 
 .comments-panel{
     padding-bottom: 0.5rem;
+    width: 100%;
 }
 
 .comments{
@@ -28,11 +33,14 @@
 
 .picture{
     display: table-cell;
+    width: 3rem;
+    padding-right: 0.5rem;
 }
 
 .picture > img{
-    margin-right: 0.5rem;
-    height: 50px;
+    height: 3rem;
+    width: 3rem;
+
 }
 
 .comment-wrapper{
