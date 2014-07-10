@@ -20,7 +20,7 @@
 }
 
 #upper-pictures-panel{
-    background-color: rgba(205,92,92,0.7);
+    background-color: rgba(195,0,0,0.7);
 }
 
 #lower-pictures-panel{
@@ -109,7 +109,7 @@
 }
 
 .u{
-    color: indianred;
+    color: rgb(195,0,0);
 }
 
 .orbit-timer{
