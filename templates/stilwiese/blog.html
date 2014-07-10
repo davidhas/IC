@@ -14,7 +14,6 @@
     <script src="{% static 'stilwiese/js/jquery.flexverticalcenter.js' %}"></script>
 
     <script>
-        $(".large-4").flexVerticalCenter();
         $( "#comments-link1" ).click(function() {
             $(".row.picture1").find( ".comments" ).toggle( "blind", 500 );
         });
@@ -41,9 +40,8 @@
             <form>
                 <input type="text" placeholder="Neuer Kommentar..."/>
             </form>
-            <a class="comments-link" id="comments-link1"><div>Kommentare</div></a>
-            <div class="comments">
-                <div class="panel comment-panel">
+            <a class="comments-link" id="comments-link1"><div>Weitere Kommentare</div></a>
+            <div class="panel comment-panel">
                     <div class="picture">
                         <img src="{% static "http://www.corporatetraveller.ca/assets/images/profile-placeholder.gif" %}" alt="User-Image"/>
                     </div>
@@ -69,6 +67,8 @@
                         </div>
                     </div>
                 </div>
+            <div class="comments">
+
                 <div class="panel comment-panel">
                     <div class="picture">
                         <img src="{% static "http://www.corporatetraveller.ca/assets/images/profile-placeholder.gif" %}" alt="User-Image"/>
