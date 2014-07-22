@@ -3,7 +3,8 @@
 
 {% block css %}
 {# Load the custom website styles #}
-<link rel="stylesheet" type="text/css" href="{% static 'stilwiese/css/basic.css' %}">
+<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="{% static 'stilwiese/css/base.css' %}">
 {# Give subsides the possibility to specify custom css without overwriting the base css #}
 {% block my_css %}{% endblock %}
 {% endblock %}
@@ -17,29 +18,29 @@
 {% block base_body%}
     {# <img src="http://newevolutiondesigns.com/images/freebies/city-wallpaper-11.jpg" class="bg"/> #}
     <div class="fixed header">
-        <div class="upper-background">
+        <div class="upper-background white-t">
 
         </div>
-        <div class="lower-background">
+        <div class="lower-background red">
 
         </div>
 
     </div>
     <div class="fixed">
     <div class="row header container">
-        <div class="medium-2 large-2 columns header" id="logo-column">
-            <div class="panel text-center header" id="logo-panel">
+        <div class="medium-3 large-3 columns header" id="logo-column">
+            <div class="panel text-center header red lightgrey-f" id="logo-panel">
                 <div id="logo">IC</div>
             </div>
         </div>
-        <div class="medium-10 large-10 columns header">
+        <div class="medium-9 large-9 columns header">
             <div class="row header" id="upper-header-row">
-                <div class="panel header" id="upper-header-panel">
+                <div class="panel header red-f" id="upper-header-panel">
                     <div class="heading">"Wer immer das tut, was er schon kann,</div>
                 </div>
             </div>
             <div class="row header" id="lower-header-row">
-                <div class="panel header" id="lower-header-panel">
+                <div class="panel header lightgrey-f" id="lower-header-panel">
                     <div class="heading right">bleibt immer das, was er schon ist."</div>
                 </div>
             </div>
@@ -48,7 +49,7 @@
     </div>
     {% block body %}{% endblock %}
 
-    <div class="footer">
+    <div class="footer red">
         <div class="row">
             Footer Text
         </div>

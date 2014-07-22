@@ -1,0 +1,50 @@
+{% extends 'stilwiese/base.html' %}
+{% load static %}
+
+{% block my_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'stilwiese/css/fashionbox.css' %}">
+{% endblock %}
+
+{% block my_head_js %}
+{% endblock %}
+
+{% block my_body_js %}
+    <script>
+        set_picture_height = function(){
+           $('.th').each(function() {
+             $(this).height($(this).width()*1.33);
+           });
+        };
+
+        $(document).ready(function(){
+           set_picture_height();
+        });
+
+        $(window).resize(function(){
+            set_picture_height();
+        });
+    </script>
+{% endblock %}
+
+{% block body %}
+<div class="row content" data-equalizer>
+    <div class="large-3 columns">
+        <ul class="side-nav">
+            <li class="white-t"><a href="#">Liked Looks</a></li>
+            <li class="white-t"><a href="#">Liked Pics</a></li>
+            <li class="white-t"><a href="#">Proposals</a></li>
+        </ul>
+    </div>
+    <div class="large-9 columns" data-equalizer-watch>
+        <ul class="small-block-grid-1 medium-block-grid-4 large-block-grid-4">
+            <li><a class="th" href="#"> <img src="{% static "stilwiese/img/lena1.png" %}"> </a></li>
+            <li><a class="th" href="#"> <img src="{% static "stilwiese/img/lena2.jpg" %}"> </a></li>
+            <li><a class="th" href="#"> <img src="{% static "stilwiese/img/lena3.jpg" %}"> </a></li>
+            <li><a class="th" href="#"> <img src="{% static "stilwiese/img/lena4.jpg" %}"> </a></li>
+            <li><a class="th" href="#"> <img src="{% static "stilwiese/img/lena5.jpg" %}"> </a></li>
+            <li><a class="th" href="#"> <img src="{% static "stilwiese/img/lena6.jpg" %}"> </a></li>
+            <li><a class="th" href="#"> <img src="{% static "stilwiese/img/lena7.jpg" %}"> </a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

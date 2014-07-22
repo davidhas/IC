@@ -41,9 +41,11 @@
         });
     };
 
-    set_orbit_height();
-    $(".orbit-container").find(".paused").click();
-    set_map_height();
+    $(document).ready(function(){
+       set_orbit_height();
+       $(".orbit-container").find(".paused").click();
+       set_map_height();
+    });
 
 
 

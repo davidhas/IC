@@ -23,3 +23,10 @@ def blog(request):
     """
 
     return render(request, 'stilwiese/blog.html')
+
+def fashionbox(request):
+    """
+    View for site containing map
+    """
+
+    return render(request, 'stilwiese/fashionbox.html')
