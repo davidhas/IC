@@ -1,3 +1,13 @@
 .orbit-next, .orbit-prev, .orbit-timer{
     display: none;
 }
+
+#zur-stilwiese:hover{
+    background-color: rgb(80,64,50);
+}
+
+#orbit2, #orbit4{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
