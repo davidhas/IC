@@ -5,6 +5,7 @@
 {# Load the custom website styles #}
 <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="{% static 'stilwiese/css/base.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'foundation/css/foundation-icons.css' %}">
 {# Give subsides the possibility to specify custom css without overwriting the base css #}
 {% block my_css %}{% endblock %}
 {% endblock %}
@@ -16,7 +17,16 @@
 {% endblock body_js %}
 
 {% block base_body%}
-    {# <img src="http://newevolutiondesigns.com/images/freebies/city-wallpaper-11.jpg" class="bg"/> #}
+    <div class="off-canvas-wrap" data-offcanvas>
+    <div class="inner-wrap">
+
+    <aside class="right-off-canvas-menu">
+        <!-- whatever you want goes here -->
+        <ul>
+          <li><a href="#">Item 1</a></li>
+        </ul>
+    </aside>
+
     <div class="fixed header">
         <div class="upper-background white-t">
 
@@ -41,7 +51,7 @@
             </div>
             <div class="row header" id="lower-header-row">
                 <div class="panel header lightgrey-f" id="lower-header-panel">
-                    <div class="heading right">bleibt immer das, was er schon ist."</div>
+                    <div class="heading">bleibt immer das, was er schon ist." <a class="right-off-canvas-toggle right" href="#" ><i class="fi-list white-f" style="font-size: 36px"></i></a></div>
                 </div>
             </div>
         </div>
@@ -54,5 +64,10 @@
             Footer Text
         </div>
     </div>
+
+     <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
 
 {% endblock %}
