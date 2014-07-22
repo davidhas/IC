@@ -1,5 +1,14 @@
-.fashion-picture > img{
+a.th{
+    width: 100%;
+}
+
+.fashion-picture > a.th{
     width: 75%;
+}
+
+a.th > img, .orbit-container, .orbit-container > li > img{
+    width: 100%;
+    height: 100%;
 }
 
 .fashion-picture.even{

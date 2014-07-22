@@ -14,6 +14,24 @@
     <script src="{% static 'stilwiese/js/jquery.flexverticalcenter.js' %}"></script>
 
     <script>
+        set_picture_height = function(){
+           $('.th').each(function() {
+             $(this).height($(this).width()*1.33);
+           });
+           $('.orbit-container').find('li').find('img').each(function() {
+             $(this).height($(this).width()*1.33);
+           });
+        };
+
+        $(document).ready(function(){
+           set_picture_height();
+        });
+
+        $(window).resize(function(){
+            set_picture_height();
+        });
+
+
         $( "#comments-link1" ).click(function() {
             $(".row.picture1").find( ".comments" ).toggle( "blind", 500 );
         });
@@ -30,8 +48,15 @@
 
 {% block body %}
 <div class="row content picture1">
-    <div class="medium-5 large-5 columns fashion-picture odd">
-       <i class="fi-plus" style="font-size: 36px; margin-right: 2rem"></i><img src="{% static "http://www.eroglamour.com/glamour/20110723/fasionpicturessetaw2011/10-fasion-pictures.-set-aw-2011.jpg" %}" alt="User-Image"/>
+    <div class="medium-8 large-8 columns fashion-picture odd">
+        <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3">
+            <li><a class="th" href="#"><img src="{% static "stilwiese/img/lena1.png" %}" alt="User-Image"/></a></li>
+            <li><a class="th" href="#"><img src="{% static "stilwiese/img/lena2.jpg" %}" alt="User-Image"/></a></li>
+            <li><a class="th" href="#"><img src="{% static "stilwiese/img/lena3.jpg" %}" alt="User-Image"/></a></li>
+        </ul>
+        <div class="panel">
+            Optionenleiste mit Outfit kaufen, Outfit liken etc...
+        </div>
     </div>
 
     <div class="medium-4 large-4 columns end">
@@ -115,7 +140,21 @@
 </div>
 <div class="row picture2">
     <div class="medium-5 large-5 columns push-7 fashion-picture even">
-        <img src="{% static "http://www.eroglamour.com/glamour/20110723/fasionpicturessetaw2011/10-fasion-pictures.-set-aw-2011.jpg" %}" alt="User-Image"/><i class="fi-plus" style="font-size: 36px; margin-left: 2rem"></i>
+        <a class="th" href="#">
+            <ul class="orbit-container" data-orbit data-options="bullets: false; slide_number: false; pause_on_hover: true; resume_on_mouseout: true; animation_speed: 1000;">
+                        {# Show orbit images. Images are referenced in templates by image.url using the media root defined in the settings #}
+                        <li data-orbit-slide="right_1">
+                            <img src="{% static "stilwiese/img/lena4.jpg" %}" alt="User-Image"/>
+                        </li>
+                        <li data-orbit-slide="right_2">
+                            <img src="{% static "stilwiese/img/lena5.jpg" %}" alt="User-Image"/>
+                        </li>
+                        <li data-orbit-slide="right_3">
+                            <img src="{% static "stilwiese/img/lena6.jpg" %}" alt="User-Image"/>
+                        </li>
+
+            </ul>
+        </a><i class="fi-plus" style="font-size: 36px; margin-left: 2rem"></i>
     </div>
 
     <div class="medium-4 large-4 pull-2 columns end">
@@ -160,7 +199,7 @@
 </div>
 <div class="row picture3">
     <div class="medium-5 large-5 columns fashion-picture">
-       <i class="fi-plus" style="font-size: 36px; margin-right: 2rem"></i><img src="{% static "http://www.eroglamour.com/glamour/20110723/fasionpicturessetaw2011/10-fasion-pictures.-set-aw-2011.jpg" %}" alt="User-Image"/>
+       <i class="fi-plus" style="font-size: 36px; margin-right: 2rem"></i><a class="th" href="#"><img src="{% static "http://www.eroglamour.com/glamour/20110723/fasionpicturessetaw2011/10-fasion-pictures.-set-aw-2011.jpg" %}" alt="User-Image"/></a>
     </div>
 
     <div class="medium-4 large-4 columns end">
