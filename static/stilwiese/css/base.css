@@ -119,8 +119,7 @@ body {
     height: 100%;
     position: relative;
     padding-bottom: 0.5%;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10%;
 
     background: none;
     border: none;
@@ -137,8 +136,7 @@ body {
     height: 100%;
     position: relative;
     padding-top: 0.5%;
-    padding-right: 20%;
-    padding-left: 20%;
+    padding-left: 30%;
 
     background: none;
     border: none;
