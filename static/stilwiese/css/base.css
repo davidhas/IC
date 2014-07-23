@@ -50,6 +50,10 @@ body {
     color: rgb(255,255,255);
 }
 
+.white-b{
+    border-color: rgb(255,255,255);
+}
+
 .red{
     background-color: rgb(108,13,13);
 }
@@ -60,6 +64,10 @@ body {
 
 .red-f{
     color: rgb(108,13,13);
+}
+
+.red-b{
+    border-color: rgb(108,13,13);
 }
 
 .lightgrey{
@@ -74,6 +82,10 @@ body {
     color: rgb(209,225,203);
 }
 
+.lightgrey-b{
+    border-color: rgb(209,225,203);
+}
+
 .darkgrey{
     background-color: rgb(80,64,50);
 }
@@ -84,6 +96,10 @@ body {
 
 .darkgrey-f{
     color: rgb(80,64,50);
+}
+
+.darkgrey-b{
+    border-color: rgb(80,64,50);
 }
 
 .fixed.header{
@@ -165,12 +181,22 @@ body {
     vertical-align: middle;
 }
 
-.panel.header > .heading {
+.panel.header > .heading, .panel.header > div > .heading {
     font-size: 1.25rem;
 }
 
 .row.content{
     margin-top: 10.6rem;
+}
+
+.fi-list{
+    font-size: 2.5rem;
+}
+
+.right-off-canvas-toggle{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: rgba(80,64,50,0.5);
 }
 
 .footer{

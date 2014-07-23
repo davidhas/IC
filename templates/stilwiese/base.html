@@ -13,6 +13,32 @@
     {% block my_head_js %}{% endblock %}
 {% endblock%}
 {% block body_js %}
+    <script>
+        check_lines = function () {
+             var several_lines = false;
+             $('.heading').each(function(){
+                var line_height = parseInt($(this).css('line-height'));
+                var div_height = $(this).height();
+                if(div_height > line_height){
+                    several_lines = true;
+                }
+             });
+             if(several_lines){
+                 $('.heading').css('visibility', 'hidden');
+             }
+             else{
+                 $('.heading').css('visibility', 'visible')
+             }
+        };
+
+        $(document).ready(function(){
+           check_lines();
+        });
+
+        $(window).resize(function(){
+           check_lines();
+        });
+    </script>
     {% block my_body_js %}{% endblock %}
 {% endblock body_js %}
 
@@ -22,8 +48,13 @@
 
     <aside class="right-off-canvas-menu">
         <!-- whatever you want goes here -->
-        <ul>
+        <ul class="off-canvas-list">
+          <li><label>Community Sites</label></li>
           <li><a href="#">Item 1</a></li>
+          <li><a href="#">Item 2</a></li>
+          <li><label>My Sites</label></li>
+          <li><a href="#">Item 3</a></li>
+          <li><a href="#">Item 4</a></li>
         </ul>
     </aside>
 
@@ -38,20 +69,20 @@
     </div>
     <div class="fixed">
     <div class="row header container">
-        <div class="medium-3 large-3 columns header" id="logo-column">
+        <div class="small-3 medium-3 large-3 columns header" id="logo-column">
             <div class="panel text-center header red lightgrey-f" id="logo-panel">
                 <div id="logo">IC</div>
             </div>
         </div>
-        <div class="medium-9 large-9 columns header">
+        <div class="small-3 medium-9 large-9 columns header">
             <div class="row header" id="upper-header-row">
                 <div class="panel header red-f" id="upper-header-panel">
-                    <div class="heading">"Wer immer das tut, was er schon kann,</div>
+                    <div><div class="heading">"Wer immer das tut, was er schon kann,</div></div>
                 </div>
             </div>
             <div class="row header" id="lower-header-row">
                 <div class="panel header lightgrey-f" id="lower-header-panel">
-                    <div class="heading">bleibt immer das, was er schon ist." <a class="right-off-canvas-toggle right" href="#" ><i class="fi-list white-f" style="font-size: 36px"></i></a></div>
+                    <a class="right-off-canvas-toggle right" href="#" ><i class="fi-list lightgrey-f"></i></a><div class="heading">bleibt immer das, was er schon ist."</div>
                 </div>
             </div>
         </div>
