@@ -7,7 +7,7 @@ urlpatterns = patterns('',
                        # pattern: url to a view, view function, reverse name used to dynamically specify urls rather
                        # than hard coding them.
                        url(r'^$', 'stilwiese.views.index', name='home'),
-                       url(r'^map/$', 'stilwiese.views.map', name='map'),
+                       url(r'^map/$', 'stilwiese.views.map', name='stilwiese'),
                        url(r'^blog/$', 'stilwiese.views.blog', name='blog'),
                        url(r'^myFashionbox/$', 'stilwiese.views.fashionbox', name='fashionbox'),
 )
