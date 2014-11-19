@@ -30,3 +30,10 @@ def fashionbox(request):
     """
 
     return render(request, 'stilwiese/fashionbox.html')
+
+def charts(request):
+    """
+    View for site containing charts
+    """
+
+    return render(request, 'stilwiese/charts.html')

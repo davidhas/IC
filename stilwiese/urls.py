@@ -10,6 +10,7 @@ urlpatterns = patterns('',
                        url(r'^stilwiese/$', 'stilwiese.views.map', name='stilwiese'),
                        url(r'^blog/$', 'stilwiese.views.blog', name='blog'),
                        url(r'^myFashionbox/$', 'stilwiese.views.fashionbox', name='fashionbox'),
+                       url(r'^myCharts/$', 'stilwiese.views.charts', name='charts'),
 )
 
 from django.conf.urls import patterns, url
