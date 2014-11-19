@@ -183,6 +183,7 @@ body {
 
 .panel.header > .heading, .panel.header > div > .heading {
     font-size: 1.25rem;
+    visibility: hidden;
 }
 
 .row.content{

@@ -66,3 +66,23 @@ a.th > img, .orbit-container, .orbit-container > li > img{
 .comment{
     font-size: 0.85rem;
 }
+
+.thumbs_col{
+    padding-left: 5px;
+}
+
+.options{
+    margin-right: 14px;
+    margin-top: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.options i{
+    font-size: 40px;
+}
+
+.options i:hover{
+   cursor: pointer;
+   color: rgb(108,13,13);
+}
