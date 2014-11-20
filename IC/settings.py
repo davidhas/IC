@@ -133,6 +133,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'stilwiese',
     'jquery_ui',
+    'scrollbar',
     # Uncomment the next line to enable the admin:
     # Uncomment the next line to enable admin documentation:
 )
