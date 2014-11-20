@@ -1,3 +1,41 @@
+.row.content{
+    margin-bottom: 30px;
+}
+
+.top_selection{
+    height: 80px;
+}
+
+.panel.top_selection{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.scrollable.top_selection{
+    overflow: hidden;
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+.scrollable.top_selection span span{
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.scrollable.top_selection span span.active{
+    color: #ffffff;
+}
+
+.scrollable.top_selection span span:hover{
+    cursor: pointer;
+    color: #ffffff;
+    background-color: rgb(80,64,50);
+}
+
 .th, .th img{
     width: 100%;
 }
