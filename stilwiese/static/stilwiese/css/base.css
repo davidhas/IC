@@ -153,6 +153,7 @@ body {
     position: relative;
     padding-top: 0.5%;
     padding-left: 30%;
+    padding-right: 13px;
 
     background: none;
     border: none;
@@ -197,6 +198,7 @@ body {
 .right-off-canvas-toggle{
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-right: 0;
     background-color: rgba(80,64,50,0.5);
 }
 
