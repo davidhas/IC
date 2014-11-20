@@ -86,3 +86,7 @@ a.th > img, .orbit-container, .orbit-container > li > img{
    cursor: pointer;
    color: rgb(108,13,13);
 }
+
+.orbit_col{
+    padding-right: 0;
+}
